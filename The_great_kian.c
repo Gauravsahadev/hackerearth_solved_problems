@@ -2,31 +2,18 @@
 int main()
 {
 	int i,n;
-	long a[n];
+	long long num,sum1=0,sum2=0,sum3=0;
 	scanf("%d",&n);
-	for(i=0;i<n;i++){
-	scanf("%ld",&a[i]);
-	}
-	i=0;
-	long sum1=0;
-	while(i<n)
+	for(i=0;i<n;i++)
 	{
-		sum1+=a[i];
-		i+=3;
+	    scanf("%lld",&num);
+	    if(i%3==0)
+	        sum3+=num;
+	    else if(i%3==1)
+	        sum2+=num;
+	    else
+	        sum1+=num;
 	}
-	int j=1;
-	long sum2=0;
-	while(j<n)
-	{
-		sum2+=a[j];
-		j+=3;
-	}
-	int k=2;
-	long sum3=0;
-	while(k<n)
-	{
-		sum3+=a[k];
-		k+=3;
-	}
-	printf("%ld %ld %ld",sum1,sum2,sum3);
+
+	printf("%lld %lld %lld",sum3,sum2,sum1);
 }
